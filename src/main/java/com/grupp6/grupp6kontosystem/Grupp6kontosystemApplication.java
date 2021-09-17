@@ -8,6 +8,9 @@ public class Grupp6kontosystemApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Grupp6kontosystemApplication.class, args);
+
+		System.out.println("Robban är cool!");
+
 	}
 
 }
