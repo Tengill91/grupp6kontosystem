@@ -1,7 +1,6 @@
-package com.grupp6.grupp6kontosystem.service;
+package com.grupp6.grupp6kontosystem.main.service;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController    // skriver ut "metoden" med @GetMapping

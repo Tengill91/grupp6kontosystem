@@ -1,4 +1,4 @@
-package com.grupp6.grupp6kontosystem.model;
+package com.grupp6.grupp6kontosystem.main.model;
 
 import javax.persistence.*;
 import static javax.persistence.GenerationType.SEQUENCE;

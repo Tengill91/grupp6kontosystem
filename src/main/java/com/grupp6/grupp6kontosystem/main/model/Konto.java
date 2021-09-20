@@ -1,4 +1,4 @@
-package com.grupp6.grupp6kontosystem.model;
+package com.grupp6.grupp6kontosystem.main.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,8 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Objects;
 
-@Entity
-@Table(name = "konto_tbl")
+@Entity(name = "Account")
+@Table(name = "account")
 public class Konto {
     @Id @GeneratedValue
     Long id;
