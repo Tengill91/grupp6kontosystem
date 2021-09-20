@@ -1,6 +1,5 @@
 package com.grupp6.grupp6kontosystem;
 
-import com.grupp6.grupp6kontosystem.bean.Handler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;

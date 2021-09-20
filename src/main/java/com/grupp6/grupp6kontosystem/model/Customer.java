@@ -5,21 +5,14 @@ import static javax.persistence.GenerationType.SEQUENCE;
 
 
 @Entity(name = "Customer")
-@Table(name = "customer", uniqueConstraints = {
-        @UniqueConstraint(name = "customer_email_unique", columnNames = "email" )
-})
+@Table(
+        name = "customer",
+        uniqueConstraints = {
+                @UniqueConstraint(name = "customer_email_unique", columnNames = "email" )
+        }
+)
+
 public class Customer {
-
-    public Customer () {
-    }
-
-    public Customer(String firstName,
-                    String lastName,
-                    String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-    }
 
     @Id
     @SequenceGenerator(
@@ -31,19 +24,50 @@ public class Customer {
             strategy = SEQUENCE,
             generator = "customer_sequence"
     )
-
-    @Column(name = "id", updatable = false)
+    @Column(
+            name = "id",
+            updatable = false
+    )
     private Long id;
 
-    @Column(name = "first_name", nullable = false, columnDefinition = "TEXT")
+    @Column(
+            name = "first_name",
+            nullable = false,
+            columnDefinition = "TEXT"
+    )
     private String firstName;
 
-    @Column(name = "last_name", nullable = false, columnDefinition = "TEXT")
+    @Column(
+            name = "last_name",
+            nullable = false,
+            columnDefinition = "TEXT"
+    )
     private String lastName;
 
-    @Column(name = "email", nullable = false, columnDefinition = "TEXT")
+    @Column(
+            name = "email",
+            nullable = false,
+            columnDefinition = "TEXT"
+    )
     private String email;
 
+    public Customer(Long id,
+                    String firstName,
+                    String lastName,
+                    String email) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
+    public Customer () {
+    }
+
+
+    public Long getId() {
+        return id;
+    }
 
     public String getFirstName() {
         return firstName;
