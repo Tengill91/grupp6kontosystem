@@ -1,0 +1,18 @@
+
+
+body{
+    background-color: antiquewhite;
+}
+
+h1 {
+    color: darkslategrey;
+    background-color: darkgray;
+    text-align: center;
+    border-radius: 25px;
+}
+
+p {
+    background-color: darkgray;
+    text-align: center;
+    border-radius: 25px;
+}
