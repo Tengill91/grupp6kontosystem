@@ -1,4 +1,4 @@
-package com.grupp6.grupp6kontosystem.model;
+package com.grupp6.grupp6kontosystem.main.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,18 +6,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Objects;
 
-@Entity
-@Table(name = "konto_tbl")
-public class konto {
+@Entity(name = "Account")
+@Table(name = "account")
+public class Konto {
     @Id @GeneratedValue
     Long id;
     String name,email,password;
 
-    public konto() {
+    public Konto() {
     }
 
 
-    public konto(String name, String email, String password) {
+    public Konto(String name, String email, String password) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -60,7 +60,7 @@ public class konto {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        konto konto = (konto) o;
+        Konto konto = (Konto) o;
         return id.equals(konto.id);
     }
 

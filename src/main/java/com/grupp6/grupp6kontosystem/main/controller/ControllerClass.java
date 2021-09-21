@@ -1,4 +1,4 @@
-package com.grupp6.grupp6kontosystem;
+package com.grupp6.grupp6kontosystem.main.controller;
 
 
 import org.springframework.stereotype.Controller;
