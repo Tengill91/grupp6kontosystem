@@ -8,18 +8,17 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import java.util.Objects;
+
 @Getter
 @Setter
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "konto_tbl")
-public class account {
+@Entity
+public class transaction {
     @Id @GeneratedValue
-    Long id;
-    String saldo;
-    long customerId;
+    private long id;
+    private long summa;
+
+
 
 }
