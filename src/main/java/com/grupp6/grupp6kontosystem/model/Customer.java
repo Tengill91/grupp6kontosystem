@@ -17,7 +17,7 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Table(
         name = "customer",
         uniqueConstraints = {
-                @UniqueConstraint(name = "customer_email_unique", columnNames = "email" )
+        @UniqueConstraint(name = "customer_email_unique", columnNames = "email" )
         }
 )
 
@@ -60,7 +60,8 @@ public class Customer {
     )
     private String email;
 
-
+    @OneToOne(mappedBy = "Account")
+    private Customer customer;
 
 
 
