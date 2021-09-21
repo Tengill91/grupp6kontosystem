@@ -14,7 +14,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class transaction {
+public class Transaction {
     @Id @GeneratedValue
     private long id;
     private long summa;
@@ -22,3 +22,5 @@ public class transaction {
 
 
 }
+
+

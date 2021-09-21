@@ -9,10 +9,8 @@ import javax.persistence.*;
 import static javax.persistence.GenerationType.SEQUENCE;
 @Getter
 @Setter
-
 @AllArgsConstructor
 @NoArgsConstructor
-
 @Entity(name = "Customer")
 @Table(
         name = "customer",
@@ -39,6 +37,10 @@ public class Customer {
     )
     private Long id;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id", referencedColumnName = "customerID")
+    private Transaction transaction;
+
     @Column(
             name = "first_name",
             nullable = false,
@@ -60,10 +62,6 @@ public class Customer {
     )
     private String email;
 
-    @OneToOne(mappedBy = "Account")
-    private Customer customer;
-
-
 
     @Override
     public String toString() {
@@ -75,3 +73,4 @@ public class Customer {
                 '}';
     }
 }
+

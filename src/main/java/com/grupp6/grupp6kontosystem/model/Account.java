@@ -10,15 +10,26 @@ import java.util.Objects;
 @Getter
 @Setter
 @Entity
+@Table(name = "account")
 @AllArgsConstructor
 @NoArgsConstructor
 
 public class Account {
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
+    @Column(name = "id")
+    private long id;
+
+    @Column(name = "balance")
+    private String balance;
+
+    @Column(name = "customerID")
+    private long customerId;
+
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id", referencedColumnName = "id")
-    Long id;
-    String saldo;
-    long customerId;
+    @JoinColumn(name = "customerID", referencedColumnName = "id")
+    private Customer customer;
+
+
 
 }
