@@ -17,6 +17,9 @@ import java.util.Objects;
 @NoArgsConstructor
 @Table(name = "konto_tbl")
 public class account {
+
+    // skapar med lombok våran blueprint för våra account objekt
+    // berättar även för appen vart i columnerna(databasen) som de olika variablerna ska ligga
     @Id @GeneratedValue
     Long id;
     String saldo;
